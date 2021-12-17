@@ -29,7 +29,7 @@ try :
     
     st.pyplot(viz_correlation.figure)
     
-    mask = np.triu(np.ones_like(corr, dtype=np.bool))
+    mask = np.triu(np.ones_like(data.corr, dtype=np.bool))
     viz_correlation1 = sns.heatmap(data.corr(), mask=mask, cmap=sns.diverging_palette(220, 10, as_cmap=True),annot = True, vmax=1, vmin=-1, center=0, square=True, linewidths=.5)
     plt.title('Cars dataset correlation heatmap \nwith coefficient',fontsize=16, pad=25.0)
     
