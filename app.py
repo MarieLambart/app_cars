@@ -24,22 +24,9 @@ try :
   else :
     
     data = df.loc[countries]
-    viz_correlation = 
+    viz_correlation = sns.heatmap(data.corr(),ax=ax,center=0,cmap= sns.diverging_palette(220, 10, as_cmap=True),, vmax=1, vmin=-1)
     
-    fig, ax = plt.subplots(nrows=1,ncols=2,figsize=(16, 6))
-    
-    plt.gcf().subplots_adjust(wspace = 0.5)
-    
-    sns.heatmap(data.corr(),ax=ax[0],center=0,cmap= sns.diverging_palette(220, 10, as_cmap=True),, vmax=1, vmin=-1)
-    ax[0].set_title('Cars dataset correlation heatmap',fontsize=16, pad=25.0)
-    
-    mask = np.triu(np.ones_like(corr, dtype=np.bool))
-
-    sns.heatmap(corr, ax=ax[1], mask=mask, cmap=sns.diverging_palette(220, 10, as_cmap=True), 
-                annot = True, vmax=1, vmin=-1, center=0, square=True, linewidths=.5)
-
-    ax[1].set_title('Cars dataset correlation heatmap \nwith coefficient',fontsize=16, pad=25.0)
-    
+    ax.set_title('Cars dataset correlation heatmap',fontsize=16, pad=25.0)
     
     st.pyplot(viz_correlation.figure)
 
