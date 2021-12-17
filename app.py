@@ -15,7 +15,7 @@ def get_data ():
 
 try :
   df = get_data()
-  countries = st.multiselect("Choose countries", list(df.index))
+  countries = st.multiselect("Choose countries", list(df.index).unique())
   
   if not countries : 
     
@@ -24,7 +24,7 @@ try :
   else :
     
     data = df.loc[countries]
-    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("vlog", as_cmap=True))
+    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("vlag", as_cmap=True))
     st.pyplot(viz_correlation.figure)
 
 except URLError as e:
