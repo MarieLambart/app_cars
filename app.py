@@ -24,7 +24,7 @@ try :
   else :
    
     
-    st.write("### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    st.write("## Correlation Heatmap of car's dataset for country(ies) that you choose.")
     
     data = df.loc[countries]
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
