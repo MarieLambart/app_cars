@@ -26,7 +26,7 @@ try :
     data = df.loc[countries]
     viz_correlation = sns.heatmap(data.corr(),ax=ax,center=0,cmap= sns.diverging_palette("vlag", as_cmap=True), vmax=1, vmin=-1)
     
-    ax.set_title('Cars dataset correlation heatmap',fontsize=16, pad=25.0)
+    plt.title('Cars dataset correlation heatmap',fontsize=16, pad=25.0)
     
     st.pyplot(viz_correlation.figure)
 
