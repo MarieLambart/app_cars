@@ -31,6 +31,8 @@ try :
     
     st.pyplot(viz_correlation.figure)
     
+    st.write("## Distribution for each caracteristics of car's dataset for country(ies) that you choose.")
+    
 
     
 
