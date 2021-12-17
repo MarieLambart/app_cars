@@ -15,7 +15,7 @@ def get_data ():
 
 try :
   df = get_data()
-  countries = st.multiselect("Choose countries", list(df.index).unique())
+  countries = st.multiselect("Choose countries", list(df.index.unique()))
   
   if not countries : 
     
