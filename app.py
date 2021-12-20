@@ -22,17 +22,21 @@ try :
     st.error("Please select at least one country.")
   
   else :
+    
+    col1, col2 = st.columns(2)
    
     
-    st.write("#### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    col1.write("#### Correlation Heatmap of car's dataset for country(ies) that you choose.")
     
     data = df.loc[countries]
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
     
-    st.pyplot(viz_correlation.figure)
     
-    st.write("#### Distribution for each caracteristics of car's dataset for country(ies) that you choose.")
+    col1.pyplot(viz_correlation.figure)
     
+    col2.write("#### Distribution for each caracteristics of car's dataset for country(ies) that you choose.")
+    
+    col2.pyplot(viz_correlation.figure)
 
     
 
