@@ -14,8 +14,12 @@ def get_data ():
   return df
 
 try :
+  
+  col1, col2, col3 = st.columns(3)
+  
+  
   df = get_data()
-  countries = st.multiselect("Choose countries", list(df.index.unique()))
+  countries = col1.multiselect("Choose countries", list(df.index.unique()))
   
   if not countries : 
     
@@ -23,20 +27,20 @@ try :
   
   else :
     
-    col1, col2 = st.columns(2)
+    
    
     
-    col1.write("#### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    col2.write("#### Correlation Heatmap of car's dataset for country(ies) that you choose.")
     
     data = df.loc[countries]
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
     
     
-    col1.pyplot(viz_correlation.figure)
-    
-    col2.write("#### Distribution for each caracteristics of car's dataset for country(ies) that you choose.")
-    
     col2.pyplot(viz_correlation.figure)
+    
+    col3.write("#### Distribution for each caracteristics of car's dataset for country(ies) that you choose.")
+    
+    col3.pyplot(viz_correlation.figure)
 
     
 
