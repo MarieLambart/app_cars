@@ -40,6 +40,13 @@ try :
     c2.write("\n")
    
     
+    c1,c2,c3 = st.columns((3,4,3))
+   
+    
+    c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
+    c2.pyplot(viz_correlation_coeff.figure)
+    
     c1,c2,c3 = st.columns((1,9,1))
     
     c2.write("We can see that there is a strong correlation positive between :\
@@ -50,13 +57,6 @@ try :
     That's to say if one increases, the other decreases.")
     
     st.write("")
-    
-    c1,c2,c3 = st.columns((3,4,3))
-   
-    
-    c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
-    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
-    c2.pyplot(viz_correlation_coeff.figure)
     
     
     data1 = data.reset_index()
