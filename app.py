@@ -51,12 +51,12 @@ try :
     
     st.write("")
     
-    c1,c2,c3 = st.columns((3,3,3))
+    c1,c2,c3 = st.columns((3,4,3))
    
     
-    c3.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
     viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
-    c3.pyplot(viz_correlation_coeff.figure)
+    c2.pyplot(viz_correlation_coeff.figure)
     
     
     data1 = data.reset_index()
