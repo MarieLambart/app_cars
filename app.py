@@ -63,13 +63,12 @@ try :
     Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60.\
     That's to say if one increases, the other decreases.")
     
-    c1_1,c2_1,c3_1,c4_1,c5_1 = st.columns((1,4,1,4,1))
     
-    c2_1.write("###### Cylinders distribution of cars.")
+    st.write("###### Cylinders distribution of cars.")
 
     viz_histplot_cylinders = sns.histplot(data = df, x="cylinders",kde=True)
 
-    c2_1.pyplot(viz_histplot_cylinders.figure)
+    st.pyplot(viz_histplot_cylinders.figure)
 
     
 
