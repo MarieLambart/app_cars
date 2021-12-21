@@ -32,7 +32,8 @@ try :
     
     c1,c2,c3 = st.columns((1,2,1))
     
-    c2.write("### Caracteristics for each cars for country(ies) that you choose.", data)
+    c2.write("### Caracteristics for each cars for country(ies) that you choose.")
+    c2.write(data)
 
 
     st.write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
