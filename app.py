@@ -100,17 +100,11 @@ try :
     
     c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
     
-    c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
-    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1)
-    c2.pyplot(viz_correlation.figure)
-    
     c3.write("###### Year distribution of cars.")
     displot_year = sns.displot(data1, x="year",color="dodgerblue")
     c3.pyplot(displot_year.figure) 
     
-    c4.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
-    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
-    c4.pyplot(viz_correlation_coeff.figure)
+
 
 except URLError as e:
   
