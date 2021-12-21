@@ -63,8 +63,7 @@ try :
     c2.write("")
     c2.write("")
     c2.write("")
-    c2.write("")
-    c2.write("")
+
     
     
     data1 = data.reset_index()
@@ -72,7 +71,10 @@ try :
     c1,c2,c3 = st.columns((1,9,1))
     
     
-    c2.write("### Caracteristics for each cars for country(ies) that you choose.")
+    c2.write("### Distribution of each caracteristis of cars for country(ies) that you choose.")
+    
+    c2.write("")
+    c2.write("")
     
     c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
     
