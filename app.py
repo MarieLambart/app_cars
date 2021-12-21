@@ -54,14 +54,12 @@ try :
 
     c2.pyplot(viz_correlation.figure)
     
-    st.write("We can see that there is a strong correlation positive between :\\Cylinders and Weightlbs, Hp, Cubicinches")
-    st.write("- Cubicinches and Weightlbs, Hp")
-    st.write("- Hp and Weightlbs")
+    st.write("We can see that there is a strong correlation positive between :\
+    Cylinders and Weightlbs, Hp, Cubicinches, Cubicinches and Weightlbs, Hp and Hp and Weightlbs")
     st.write("That's to say if one increases, the other also increases.")
     st.write("")
-    st.write("and a strong correlation negative bewteen :")
-    st.write("- Mpg and Weightlbs, Hp, Cubicinches, Cylinders")
-    st.write("- Hp and Time-to-60")
+    st.write("And a strong correlation negative bewteen : \
+    Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60")
     st.write("That's to say if one increases, the other decreases.")
 
     
