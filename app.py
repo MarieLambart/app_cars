@@ -54,8 +54,8 @@ try :
 
     c2.pyplot(viz_correlation_coeff.figure)
     
-    st.write("We can see that there is a strong correlation positive between :)
-    st.write("- Cylinders and Weightlbs, Hp et Cubicinches)
+    st.write("We can see that there is a strong correlation positive between :")
+    st.write("- Cylinders and Weightlbs, Hp et Cubicinches")
     st.write("- Cubicinches and Weightlbs, Hp")
     st.write("- Hp and Weightlbs")
     st.write("That's to say if one increases, the other also increases.")
