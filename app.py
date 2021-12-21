@@ -39,7 +39,7 @@ try :
     c2.write("\n")
     c2.write("\n")
     
-    c1,c2,c3,c4,c5 = st.columns((1,3,1,3,1))
+    c1,c2,c3,c4,c5 = st.columns((1,2,1,2,1))
 
 
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1)
