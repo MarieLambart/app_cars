@@ -34,19 +34,19 @@ try :
     
     c2.write("### Caracteristics for each cars for country(ies) that you choose.", data)
     
-    cols = st.columns(2)   
-    
-    cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+      cols = st.columns(2)   
 
-    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
+      cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
 
-    cols[0].pyplot(viz_correlation.figure)
-    
-    cols[1].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
-    
-    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
-    
-    cols[1].pyplot(viz_correlation_coeff.figure)
+      viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
+
+      cols[0].pyplot(viz_correlation.figure)
+
+      cols[1].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
+
+      viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
+
+      cols[1].pyplot(viz_correlation_coeff.figure)
 
     
 
