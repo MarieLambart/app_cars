@@ -13,7 +13,7 @@ def get_data ():
   df.set_index("continent", inplace=True)
   return df
 
-
+st.set_page_config(layout="wide")
 
 try :
   
@@ -29,7 +29,6 @@ try :
   
   else :
     
-    st.set_page_config(layout="wide")
     
     col1, col2, col3, col4 = st.columns(4)   
    
