@@ -39,7 +39,7 @@ try :
     c2.write("\n")
     c2.write("\n")
     
-    c1,c2,c3,c4 = st.columns((1,3,3,1))
+    c1,c2,c3,c4,c5 = st.columns((1,4,1,4,1))
 
 
     c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
@@ -48,13 +48,13 @@ try :
 
     c2.pyplot(viz_correlation.figure)
     
-    c3.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
+    c4.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
 
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
 
-    c3.pyplot(viz_correlation.figure)
+    c4.pyplot(viz_correlation.figure)
     
-    c1,c2,c3 = st.columns((1,6,1))
+    c1,c2,c3 = st.columns((1,9,1))
     
     c2.write("We can see that there is a strong correlation positive between :\
     Cylinders and Weightlbs, Hp, Cubicinches, Cubicinches and Weightlbs, Hp and Hp and Weightlbs.\
