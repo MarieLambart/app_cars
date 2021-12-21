@@ -22,7 +22,7 @@ try :
   df = get_data()
   countries = cols[1].multiselect("Choose countries", list(df.index.unique()))
   
-  st.write("### Caracteristics for each cars for country(ies) that you choose."), data)
+  st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
   
   if not countries : 
     
