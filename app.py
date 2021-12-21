@@ -35,9 +35,11 @@ try :
     c2.write("### Caracteristics for each cars for country(ies) that you choose.")
     c2.write(data)
     
-    c2.write("\n")
-    c2.write("\n")
-    c2.write("\n")
+    c2.write("")
+    c2.write("")
+    c2.write("")
+    c2.write("")
+    c2.write("")
    
     
     c1,c2,c3 = st.columns((3,4,3))
@@ -56,7 +58,11 @@ try :
     Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60.\
     That's to say if one increases, the other decreases.")
     
-    st.write("")
+    c2.write("")
+    c2.write("")
+    c2.write("")
+    c2.write("")
+    c2.write("")
     
     
     data1 = data.reset_index()
