@@ -71,9 +71,15 @@ try :
     
     c2.write("###### Cylinders distribution of cars.")
 
-    histplot_cylinders = sns.displot(data1, x="cylinders")
+    displot_cylinders = sns.displot(data1, x="cylinders")
 
     c2.pyplot(histplot_cylinders.figure)
+    
+    c3.write("###### Time to 60 distribution of cars.")
+
+    displot_time_to_60 = sns.displot(data1, x="time-to-60")
+
+    c3.pyplot(displot_time_to_60.figure)
 
     
 
