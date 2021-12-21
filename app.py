@@ -39,14 +39,15 @@ try :
     c2.write("\n")
     c2.write("\n")
     
+    c1,c2,c3,c4,c5 = st.columns((1,3,1,3,1))
 
 
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1)
-    st.pyplot(viz_correlation.figure)
+    c2.pyplot(viz_correlation.figure)
     
 
     viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
-    st.pyplot(viz_correlation_coeff.figure)
+    c4.pyplot(viz_correlation_coeff.figure)
    
     
     c1,c2,c3 = st.columns((1,9,1))
