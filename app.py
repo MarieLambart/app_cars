@@ -67,7 +67,7 @@ try :
     
     c2.write("###### Cylinders distribution of cars.")
 
-    viz_histplot_cylinders = sns.heatmap(sns.histplot(data = df, x="cylinders", ax=ax[0,0],kde=True))
+    viz_histplot_cylinders = sns.histplot(data = df, x="cylinders", ax=ax[0,0],kde=True)
 
     c2.pyplot(viz_histplot_cylinders.figure)
 
