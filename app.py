@@ -62,6 +62,14 @@ try :
     c2.write("And a strong correlation negative bewteen : \
     Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60.\
     That's to say if one increases, the other decreases.")
+    
+    c1,c2,c3,c4,c5 = st.columns((1,4,1,4,1))
+    
+    c2.write("###### Cylinders distribution of cars.")
+
+    viz_histplot_cylinders = sns.heatmap(sns.histplot(data = df, x="cylinders", ax=ax[0,0],kde=True))
+
+    c2.pyplot(viz_histplot_cylinders.figure)
 
     
 
