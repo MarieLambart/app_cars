@@ -20,7 +20,7 @@ try :
   cols = st.columns(4)
 
   df = get_data()
-  countries = cols.multiselect("Choose countries", list(df.index.unique()))
+  countries = cols[1].multiselect("Choose countries", list(df.index.unique()))
   
   if not countries : 
     
