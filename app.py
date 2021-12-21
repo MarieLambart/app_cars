@@ -20,17 +20,17 @@ try :
   c1, c2, c3 = st.columns((1, 2, 1))
 
   df = get_data()
-  countries = c2.multiselect("Choose countries", list(df.index.unique()))
+  countries = st.sidebar.multiselect("Choose countries", list(df.index.unique()))
   
   if not countries : 
     
-    st.error("Please select at least one country.")
+    st.sidebar.error("Please select at least one country.")
   
   else :
     
     data = df.loc[countries]
     
-    st.sidebar.write("### Caracteristics for each cars for country(ies) that you choose.", data)
+    st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
     
     cols = st.columns(2)
 
