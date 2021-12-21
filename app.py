@@ -32,7 +32,7 @@ try :
     
     cols = st.columns(3)
     
-    cols[1].write("### Caracteristics for each cars for country(ies) that you choose.", data)
+    st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
     
     cols = st.columns(2)   
     
