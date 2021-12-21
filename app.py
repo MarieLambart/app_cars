@@ -42,28 +42,23 @@ try :
     c1,c2 = st.columns((1,1))
 
 
-    c1.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    c1.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
 
-    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
+    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
 
     c1.pyplot(viz_correlation.figure)
 
-    c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
-   
-    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
-
-    c2.pyplot(viz_correlation_coeff.figure)
     
-    st.write("We can see that there is a strong correlation positive between :")
-    st.write("- Cylinders and Weightlbs, Hp et Cubicinches")
-    st.write("- Cubicinches and Weightlbs, Hp")
-    st.write("- Hp and Weightlbs")
-    st.write("That's to say if one increases, the other also increases.")
-    st.write("")
-    st.write("and a strong correlation negative bewteen :")
-    st.write("- Mpg and Weightlbs, Hp, Cubicinches, Cylinders")
-    st.write("- Hp and Time-to-60")
-    st.write("That's to say if one increases, the other decreases.")
+    c2.write("We can see that there is a strong correlation positive between :")
+    c2.write("- Cylinders and Weightlbs, Hp, Cubicinches")
+    c2.write("- Cubicinches and Weightlbs, Hp")
+    c2.write("- Hp and Weightlbs")
+    c2.write("That's to say if one increases, the other also increases.")
+    c2.write("")
+    c2.write("and a strong correlation negative bewteen :")
+    c2.write("- Mpg and Weightlbs, Hp, Cubicinches, Cylinders")
+    c2.write("- Hp and Time-to-60")
+    c2.write("That's to say if one increases, the other decreases.")
 
     
 
