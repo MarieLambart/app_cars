@@ -72,35 +72,35 @@ try :
     
     
     c2.write("###### Cylinders distribution of cars.")
-    displot_cylinders = sns.displot(data1, x="cylinders",color="darkcyan")
+    displot_cylinders = sns.displot(data1, x="cylinders",color="dodgerblue")
     c2.pyplot(displot_cylinders.figure)
     
     c3.write("###### Time to 60 distribution of cars.")
-    displot_time_to_60 = sns.displot(data1, x="time-to-60",color="darkcyan")
+    displot_time_to_60 = sns.displot(data1, x="time-to-60",color="dodgerblue")
     c3.pyplot(displot_time_to_60.figure)
     
     c4.write("###### Mpg distribution of cars.")
-    displot_mpg = sns.displot(data1, x="mpg",color="darkcyan")
+    displot_mpg = sns.displot(data1, x="mpg",color="dodgerblue")
     c4.pyplot(displot_mpg.figure)
     
     c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
     
     c2.write("###### Cubicinches distribution of cars.")
-    displot_cubicinches = sns.displot(data1, x="cubicinches",color="darkcyan")
+    displot_cubicinches = sns.displot(data1, x="cubicinches",color="dodgerblue")
     c2.pyplot(displot_cubicinches.figure)
     
     c3.write("###### Hp distribution of cars.")
-    displot_hp = sns.displot(data1, x="hp",color="darkcyan")
+    displot_hp = sns.displot(data1, x="hp",color="dodgerblue")
     c3.pyplot(displot_hp.figure)
     
     c4.write("###### Weightlbs distribution of cars.")
-    displot_weightlbs = sns.displot(data1, x="weightlbs",color="darkcyan")
+    displot_weightlbs = sns.displot(data1, x="weightlbs",color="dodgerblue")
     c4.pyplot(displot_weightlbs.figure)
     
     c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
     
     c3.write("###### Year distribution of cars.")
-    displot_year = sns.displot(data1, x="year",color="darkcyan")
+    displot_year = sns.displot(data1, x="year",color="dodgerblue")
     c3.pyplot(displot_year.figure)    
 
 except URLError as e:
