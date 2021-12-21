@@ -71,7 +71,7 @@ try :
     
     c2.write("###### Cylinders distribution of cars.")
 
-    histplot_cylinders = sns.histplot(x=data1["cylinders"])
+    histplot_cylinders = sns.displot(x=data1["cylinders"])
 
     c2.pyplot(histplot_cylinders.figure)
 
