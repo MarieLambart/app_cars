@@ -39,7 +39,7 @@ try :
     c2.write("\n")
     c2.write("\n")
     
-    c1,c2,c3,c4 = st.columns((1,2,2,1))
+    c1,c2,c3,c4 = st.columns((1,3,3,1))
 
 
     c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
@@ -54,10 +54,12 @@ try :
 
     c3.pyplot(viz_correlation.figure)
     
-    st.write("We can see that there is a strong correlation positive between :\
+    c1,c2,c3 = st.columns((1,6,1))
+    
+    c2.write("We can see that there is a strong correlation positive between :\
     Cylinders and Weightlbs, Hp, Cubicinches, Cubicinches and Weightlbs, Hp and Hp and Weightlbs.\
     That's to say if one increases, the other also increases.")
-    st.write("And a strong correlation negative bewteen : \
+    c2.write("And a strong correlation negative bewteen : \
     Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60.\
     That's to say if one increases, the other decreases.")
 
