@@ -47,8 +47,8 @@ try :
     c2.pyplot(viz_correlation.figure)
     
     c4.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
-    viz_correlation_coeff = sns.heatmap(data.corr(),cmap= sns.color_palette("coolwarm", as_cmap=True))
-    c4.pyplot(viz_correlation_coeff.figure)
+    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1)
+    c2.pyplot(viz_correlation_coeff.figure)
     
     c1,c2,c3 = st.columns((1,9,1))
     
