@@ -59,7 +59,7 @@ try :
     st.write("- Cubicinches and Weightlbs, Hp")
     st.write("- Hp and Weightlbs")
     st.write("That's to say if one increases, the other also increases.")
-    st.write(")
+    st.write("")
     st.write("and a strong correlation negative bewteen :")
     st.write("- Mpg and Weightlbs, Hp, Cubicinches, Cylinders")
     st.write("- Hp and Time-to-60")
