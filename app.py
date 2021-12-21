@@ -72,7 +72,7 @@ try :
     
     
     c2.write("###### Cylinders distribution of cars.")
-    displot_cylinders = sns.displot(data1, x="cylinders",cmap= sns.color_palette(220))
+    displot_cylinders = sns.displot(data1, x="cylinders",color=220)
     c2.pyplot(displot_cylinders.figure)
     
     c3.write("###### Time to 60 distribution of cars.")
