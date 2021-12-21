@@ -73,7 +73,7 @@ try :
 
     histplot_cylinders = sns.histplot(x=data1["cylinders"])
 
-    c2.pyplot(histplot_cylinders.figure)
+    c2.pyplot(histplot_cylinders)
 
     
 
