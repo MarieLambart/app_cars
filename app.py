@@ -73,7 +73,7 @@ try :
 
     displot_cylinders = sns.displot(data1, x="cylinders")
 
-    c2.pyplot(histplot_cylinders.figure)
+    c2.pyplot(displot_cylinders.figure)
     
     c3.write("###### Time to 60 distribution of cars.")
 
