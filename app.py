@@ -39,7 +39,7 @@ try :
     c2.write("\n")
     c2.write("\n")
     
-    c1,c2,c3,c4,c5 = st.columns((1,4,4,1))
+    c1,c2,c3,c4 = st.columns((1,4,4,1))
 
 
     c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
