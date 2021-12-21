@@ -30,11 +30,11 @@ try :
     
     data = df.loc[countries]
     
+    c1_1, c2_1, c3_1 = st.columns((1, 2, 1))
+    
+    c2_1.write("### Caracteristics for each cars for country(ies) that you choose.", data)
+    
     cols = st.columns(2)
-    
-    cols[0].write("### Caracteristics for each cars for country(ies) that you choose.", data)
-    
-   
 
     cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
 
