@@ -97,7 +97,7 @@ try :
     c3.pyplot(displot_year.figure) 
     
     c4.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
-    viz_correlatio_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
+    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
     c4.pyplot(viz_correlation_coeff.figure)
 
 except URLError as e:
