@@ -66,7 +66,7 @@ try :
     
     data1 = data.reset_index()
     
-    c1,c2,c3,c4,c5 = st.columns((1,4,1,4,1))
+    c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
     
     
     c2.write("###### Cylinders distribution of cars.")
