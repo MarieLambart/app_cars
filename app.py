@@ -17,7 +17,7 @@ st.set_page_config(layout="wide")
 
 try :
   
-  c1, c2, c3 = st.columns((1, 2, 1))
+
 
   df = get_data()
   countries = st.sidebar.multiselect("Choose countries", list(df.index.unique()))
@@ -31,20 +31,19 @@ try :
     data = df.loc[countries]
     
     st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
-    
-    cols = st.columns(2)
 
-    cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+
+    st.write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
 
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
 
-    cols[0].pyplot(viz_correlation.figure)
+    st.pyplot(viz_correlation.figure)
 
-    cols[1].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
+    st.write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
    
     viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
 
-    cols[1].pyplot(viz_correlation_coeff.figure)
+    st.pyplot(viz_correlation_coeff.figure)
     
     st.write("We can see that there is a big correlation between....")
 
