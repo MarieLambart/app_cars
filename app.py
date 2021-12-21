@@ -35,7 +35,9 @@ try :
     c2.write("### Caracteristics for each cars for country(ies) that you choose.")
     c2.write(data)
     
-    c2.write("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    c2.write("\n\")
+    c2.write("\n\")
+    c2.write("\n\")
     
     c1,c2 = st.columns((1,1))
 
