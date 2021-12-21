@@ -50,9 +50,9 @@ try :
     
     c4.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
 
-    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
+    viz_correlation_2 = sns.heatmap(data.corr(),center=0,cmap= sns.color_palette("coolwarm", as_cmap=True), vmax=1, vmin=-1,annot=True)
 
-    c4.pyplot(viz_correlation.figure)
+    c4.pyplot(viz_correlation_2.figure)
     
     c1,c2,c3 = st.columns((1,9,1))
     
