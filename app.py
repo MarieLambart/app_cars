@@ -30,23 +30,22 @@ try :
     
     data = df.loc[countries]
     
-    c1, c2, c3 = st.columns((1, 2, 1))
     
-    c2.write("### Caracteristics for each cars for country(ies) that you choose.", data)
+    cols[0].write("### Caracteristics for each cars for country(ies) that you choose.", data)
     
-      cols = st.columns(2)   
+    cols = st.columns(2)   
 
-      cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
 
-      viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
+    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
 
-      cols[0].pyplot(viz_correlation.figure)
+    cols[0].pyplot(viz_correlation.figure)
 
-      cols[1].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
+    cols[1].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
+   
+    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
 
-      viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
-
-      cols[1].pyplot(viz_correlation_coeff.figure)
+    cols[1].pyplot(viz_correlation_coeff.figure)
 
     
 
