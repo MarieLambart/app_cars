@@ -17,10 +17,10 @@ st.set_page_config(layout="wide")
 
 try :
   
-  cols = st.columns(3)
+  c1, c2, c3 = st.columns((1, 2, 1))
 
   df = get_data()
-  countries = cols[1].multiselect("Choose countries", list(df.index.unique()))
+  countries = c2.multiselect("Choose countries", list(df.index.unique()))
   
   if not countries : 
     
