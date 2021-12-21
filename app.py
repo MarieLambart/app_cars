@@ -64,7 +64,7 @@ try :
     That's to say if one increases, the other decreases.")
     
     
-    st.write(data)
+    data1 = data.reset_index()
     
     
     st.write("###### Cylinders distribution of cars.")
