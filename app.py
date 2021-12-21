@@ -66,12 +66,14 @@ try :
     
     data1 = data.reset_index()
     
+    c1,c2,c3,c4,c5 = st.columns((1,4,1,4,1))
     
-    st.write("###### Cylinders distribution of cars.")
+    
+    c2.write("###### Cylinders distribution of cars.")
 
     histplot_cylinders = sns.histplot(data1, x="cylinders")
 
-    st.pyplot(histplot_cylinders.figure)
+    c2.pyplot(histplot_cylinders.figure)
 
     
 
