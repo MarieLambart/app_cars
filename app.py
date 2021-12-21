@@ -30,9 +30,8 @@ try :
     
     data = df.loc[countries]
     
-    cols = st.columns(3)
     
-    st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
+    cols[0:1].write("### Caracteristics for each cars for country(ies) that you choose.", data)
     
     cols = st.columns(2)   
     
