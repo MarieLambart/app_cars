@@ -42,13 +42,13 @@ try :
     c1,c2 = st.columns((1,1))
 
 
-    c1.write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    c1.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose.")
 
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
 
     c1.pyplot(viz_correlation.figure)
 
-    c2.write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
+    c2.write("###### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
    
     viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
 
