@@ -51,6 +51,8 @@ try :
     
     c1,c2,c3 = st.columns((1,9,1))
     
+    c2.write("")
+    
     c2.write("We can see that there is a strong correlation positive between :\
     Cylinders and Weightlbs, Hp, Cubicinches, Cubicinches and Weightlbs, Hp and Hp and Weightlbs.\
     That's to say if one increases, the other also increases.")
