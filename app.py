@@ -22,6 +22,8 @@ try :
   df = get_data()
   countries = cols[1].multiselect("Choose countries", list(df.index.unique()))
   
+  st.write("### Caracteristics for each cars for country(ies) that you choose."), data)
+  
   if not countries : 
     
     st.error("Please select at least one country.")
@@ -32,7 +34,7 @@ try :
     
     cols = st.columns(2)   
     
-    cols[0].write("\n\n##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+    cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
 
     viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
 
