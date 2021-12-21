@@ -63,14 +63,13 @@ try :
     Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60.\
     That's to say if one increases, the other decreases.")
     
-    data1 = data.reset_index()
     
-    st.write(data1)
+    st.write(data)
     
     
     st.write("###### Cylinders distribution of cars.")
 
-    viz_histplot_cylinders = sns.barplot(data1, x="cylinders")
+    viz_histplot_cylinders = sns.barplot(data, x="cylinders")
 
     st.pyplot(viz_histplot_cylinders.figure)
 
