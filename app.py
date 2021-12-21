@@ -82,8 +82,26 @@ try :
     c4.write("###### Mpg distribution of cars.")
     displot_mpg = sns.displot(data1, x="mpg")
     c4.pyplot(displot_mpg.figure)
-
     
+    c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
+    
+    c2.write("###### Cubicinches distribution of cars.")
+    displot_cubicinches = sns.displot(data1, x="cubicinches")
+    c2.pyplot(displot_cubicinches.figure)
+    
+    c3.write("###### Hp distribution of cars.")
+    displot_hp = sns.displot(data1, x="hp")
+    c3.pyplot(displot_hp.figure)
+    
+    c4.write("###### Weightlbs distribution of cars.")
+    displot_weightlbs = sns.displot(data1, x="weightlbs")
+    c4.pyplot(displot_weightlbs.figure)
+    
+    c1,c2,c3,c4,c5 = st.columns((1,3,3,3,1))
+    
+    c3.write("###### Year distribution of cars.")
+    displot_year = sns.displot(data1, x="year")
+    c3.pyplot(displot_year.figure)    
 
 except URLError as e:
   
