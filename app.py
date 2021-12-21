@@ -22,8 +22,6 @@ try :
   df = get_data()
   countries = cols[1].multiselect("Choose countries", list(df.index.unique()))
   
-  st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
-  
   if not countries : 
     
     st.error("Please select at least one country.")
@@ -31,6 +29,8 @@ try :
   else :
     
     data = df.loc[countries]
+    
+    st.write("### Caracteristics for each cars for country(ies) that you choose.", data)
     
     cols = st.columns(2)   
     
