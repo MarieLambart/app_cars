@@ -17,11 +17,11 @@ st.set_page_config(layout="wide")
 
 try :
   
-  col1, col2, col3, col4 = st.columns(4)
+
   
   
   df = get_data()
-  countries = col1.multiselect("Choose countries", list(df.index.unique()))
+  countries = st.multiselect("Choose countries", list(df.index.unique()))
   
   if not countries : 
     
@@ -29,7 +29,7 @@ try :
   
   else :
     
-    
+    col1, col2, col3, col4 = st.columns(4)   
    
     
     col3.write("#### Correlation Heatmap of car's dataset for country(ies) that you choose.")
