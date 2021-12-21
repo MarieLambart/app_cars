@@ -46,7 +46,7 @@ try :
 
     cols[1].pyplot(viz_correlation_coeff.figure)
     
-    st.write("We can see that there is a big correlation between...."
+    st.write("We can see that there is a big correlation between....")
 
     
 
