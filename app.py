@@ -45,6 +45,8 @@ try :
     viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
 
     cols[1].pyplot(viz_correlation_coeff.figure)
+    
+    st.write("We can see that there is a big correlation between...."
 
     
 
