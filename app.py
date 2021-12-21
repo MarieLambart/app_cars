@@ -56,7 +56,7 @@ try :
     c2.write("We can see that there is a strong correlation positive between :\
     Cylinders and Weightlbs, Hp, Cubicinches, Cubicinches and Weightlbs, Hp and Hp and Weightlbs.\
     That's to say if one increases, the other also increases.")
-    c2.write("And a strong correlation negative bewteen : \
+    c2.write("And a strong correlation negative beewteen : \
     Mpg and Weightlbs, Hp, Cubicinches, Cylinders and Hp and Time-to-60.\
     That's to say if one increases, the other decreases.")
     
@@ -103,6 +103,17 @@ try :
     c3.write("###### Year distribution of cars.")
     displot_year = sns.displot(data1, x="year",color="dodgerblue")
     c3.pyplot(displot_year.figure) 
+    
+    c1,c2,c3 = st.columns((1,9,1))
+    
+    c2.write("")
+    
+    c2.write("We can see that if you choose all columns, the distribution of each caracteristics is the same of US \
+    because the united states represent 50% of data.\
+    The distribution of each characteristic is different from one region to another.\
+    For example there is so many cars with cubicinches beetween 200 and 300 for the country US whereas for the countries\
+    Japan and Europe, the cubicinches is beetween 80 and 120, it's a big difference.\
+    The cars are most powerful in United States.")
     
 
 
