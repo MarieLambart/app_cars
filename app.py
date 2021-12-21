@@ -66,7 +66,7 @@ try :
     
     st.write("###### Cylinders distribution of cars.")
 
-    viz_histplot_cylinders = sns.histplot(data = df, x="cylinders",kde=True)
+    viz_histplot_cylinders = sns.histplot(data = data, x="cylinders",kde=True)
 
     st.pyplot(viz_histplot_cylinders.figure)
 
