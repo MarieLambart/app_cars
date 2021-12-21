@@ -72,16 +72,16 @@ try :
     
     
     c2.write("###### Cylinders distribution of cars.")
-
     displot_cylinders = sns.displot(data1, x="cylinders")
-
     c2.pyplot(displot_cylinders.figure)
     
     c3.write("###### Time to 60 distribution of cars.")
-
     displot_time_to_60 = sns.displot(data1, x="time-to-60")
-
     c3.pyplot(displot_time_to_60.figure)
+    
+    c4.write("###### Mpg distribution of cars.")
+    displot_mpg = sns.displot(data1, x="mpg")
+    c4.pyplot(displot_mpg.figure)
 
     
 
