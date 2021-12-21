@@ -28,21 +28,21 @@ try :
   
   else :
     
-    
-    col1, col2, col3, col4 = st.columns(4)   
-   
-    
-    col3.write("#### Correlation Heatmap of car's dataset for country(ies) that you choose.")
-    
     data = df.loc[countries]
-    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
     
+    cols = st.columns(2)   
     
-    col3.pyplot(viz_correlation.figure)
+    cols[0].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose.")
+
+    viz_correlation = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1)
+
+    cols[0].pyplot(viz_correlation.figure)
     
-    col4.write("#### Distribution for each caracteristics of car's dataset for country(ies) that you choose.")
+    cols[1].write("##### Correlation Heatmap of car's dataset for country(ies) that you choose with coefficient.")
     
-    col4.pyplot(viz_correlation.figure)
+    viz_correlation_coeff = sns.heatmap(data.corr(),center=0,cmap= sns.diverging_palette(220, 10,  as_cmap=True), vmax=1, vmin=-1,annot=True)
+    
+    cols[1].pyplot(viz_correlation_coeff.figure)
 
     
 
